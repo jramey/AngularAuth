@@ -1,0 +1,17 @@
+<div class="container" ng-controller="loginController as vm">
+    <div class="card card-container">
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus ng-model="vm.username">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required  ng-model="vm.password">
+            <div id="remember" class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="vm.logIn()">Sign in</button>
+        </form>
+        <p ng-if="vm.invalidLogin">Invalid Username/Password<p>
+    </div>
+</div>
